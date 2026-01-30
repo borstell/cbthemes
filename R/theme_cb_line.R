@@ -1,0 +1,116 @@
+#' CB line chart theme
+#'
+#' Custom ggplot theme
+#'
+#' @param base_family Base font family. Default "Archivo Narrow".
+#' @param bold_family Bold font type. Default "Archivo Narrow Bold"
+#' @param ital_family Italic font type. Default "Archivo Narrow Italic"
+#' @param thin_family Italic font type. Default "Archivo Narrow Italic"
+#' @param base_size Base font size for text elements. Default 14.
+#' @param hjust Horizontal alignment of title, subtitle and caption. Default 0.
+#' @param text_clr_1 Text color (1st). Default "grey20".
+#' @param text_clr_2 Text color (2nd). Default "grey40".
+#' @param text_clr_3 Text color (3rd). Default "grey80".
+#' @param paper Background color. Default "white".
+#' @return A ggplot2 theme
+#' @export
+
+theme_cb_line <- function(base_family = "ArchivoNarrow-Medium",
+                          bold_family = "ArchivoNarrow-Bold",
+                          ital_family = "ArchivoNarrow-Italic",
+                          thin_family = "ArchivoNarrow-Regular",
+                          base_size = 14,
+                          hjust = 0,
+                          text_clr_1 = "grey20",
+                          text_clr_2 = "grey40",
+                          text_clr_3 = "grey70",
+                          paper = "#FDFDFD") {
+  ggplot2::theme_minimal(
+    base_family = base_family,
+    base_size = base_size,
+    paper = paper
+  ) +
+    ggplot2::theme(
+
+      # Plot title
+      plot.title = ggplot2::element_text(
+        size = ggplot2::rel(1.5),
+        family = bold_family,
+        hjust = hjust,
+        color = text_clr_1
+      ),
+      plot.title.position = "plot",
+
+      # Plot subtitle
+      plot.subtitle = ggplot2::element_text(
+        hjust = hjust,
+        color = text_clr_2
+      ),
+
+      # Plot caption
+      plot.caption = ggplot2::element_text(
+        family = thin_family,
+        hjust = hjust,
+        color = text_clr_3
+      ),
+      plot.caption.position = "plot",
+
+      # Axis titles
+      axis.title = ggplot2::element_text(
+        color = text_clr_2
+      ),
+      axis.title.x = ggplot2::element_text(
+        margin = ggplot2::margin(t = 10, b = -10),
+        color = text_clr_2
+      ),
+      axis.title.y = ggplot2::element_text(
+        margin = ggplot2::margin(r = 10),
+        color = text_clr_2
+      ),
+      axis.text = ggplot2::element_text(
+        family = thin_family,
+        color = text_clr_2
+      ),
+
+      # Plot properties
+      plot.margin = ggplot2::margin(10, 10, 10, 10),
+      plot.background = ggplot2::element_rect(
+        fill = paper,
+        color = "transparent"
+      ),
+      panel.background = ggplot2::element_rect(
+        fill = paper,
+        color = "transparent"
+      ),
+      panel.grid.major.x = ggplot2::element_blank(),
+      panel.grid.minor.x = ggplot2::element_blank(),
+
+      # Legend properties
+      legend.position = "bottom",
+      legend.text = ggplot2::element_text(
+        color = text_clr_2
+      ),
+      legend.title = ggplot2::element_text(
+        color = text_clr_1
+      ),
+      legend.background = ggplot2::element_rect(
+        fill = "transparent",
+        color = "transparent"
+      ),
+      legend.key = ggplot2::element_rect(
+        fill = "transparent",
+        color = "transparent"
+      ),
+
+      # Facet properties
+      strip.background = ggplot2::element_rect(
+        fill = "transparent",
+        color = "transparent"
+      ),
+      strip.text = ggplot2::element_text(
+        hjust = 0,
+        color = text_clr_1,
+        size = ggplot2::rel(.8)
+      )
+    )
+}

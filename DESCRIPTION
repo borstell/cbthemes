@@ -1,0 +1,14 @@
+Package: cbthemes
+Type: Package
+Title: Custom Themes and Colors
+Version: 0.1.0
+Authors@R: c(
+    person(given = "Carl", family = "Börstell", role = c("aut", "cre"), email = "carl.borstell@uib.no")
+  )
+Description: Package with custom themes, fonts and palettes by Carl Börstell.
+License: CC BY 4.0
+Encoding: UTF-8
+LazyData: true
+Imports:
+  ggplot2
+RoxygenNote: 7.3.2
