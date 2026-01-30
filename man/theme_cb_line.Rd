@@ -5,10 +5,7 @@
 \title{CB line chart theme}
 \usage{
 theme_cb_line(
-  base_family = "ArchivoNarrow-Medium",
-  bold_family = "ArchivoNarrow-Bold",
-  ital_family = "ArchivoNarrow-Italic",
-  thin_family = "ArchivoNarrow-Regular",
+  base_family = "Atkinson Hyperlegible",
   base_size = 14,
   hjust = 0,
   text_clr_1 = "grey20",
@@ -18,13 +15,7 @@ theme_cb_line(
 )
 }
 \arguments{
-\item{base_family}{Base font family. Default "Archivo Narrow".}
-
-\item{bold_family}{Bold font type. Default "Archivo Narrow Bold"}
-
-\item{ital_family}{Italic font type. Default "Archivo Narrow Italic"}
-
-\item{thin_family}{Italic font type. Default "Archivo Narrow Italic"}
+\item{base_family}{Base font family. Default "Atkinson Hyperlegible".}
 
 \item{base_size}{Base font size for text elements. Default 14.}
 
