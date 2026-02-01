@@ -77,6 +77,10 @@ cb_darkblue <- "#104E8B"
 #' @export
 cb_gold <- "#FFC125"
 
+#' CB lavender
+#' @export
+cb_lavender <- "#E2C7E2"
+
 #' CB pink
 #' @export
 cb_pink <- "#FFC0CB"
